@@ -4,8 +4,6 @@
 
 # Índice
 
-/
-
 ---
 
 # Objetivos da Disciplina
