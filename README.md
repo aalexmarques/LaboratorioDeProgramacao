@@ -1,7 +1,3 @@
-**Professor:**  Nelson Figueiredo | **Gabinete:** 13
-
-**E-mail:** nfigueiredo@ipb.pt
-
 # Índice
 
 /
