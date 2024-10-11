@@ -1,8 +1,8 @@
 #include <stdio.h>
+
 int main(){
-    int h,m,s;
+    int hh,mm,ss;
     printf("Insira a hora [hh:mm:ss]: ");
-    scanf("%d:%d:%d",&h,&m,&s);
-    printf("Total: %d segundos",60*(h*60+m)+s);
-    
+    scanf("%d:%d:%d",&hh,&mm,&ss);
+    printf("\nTotal: %d segundos", hh*60*60+mm*60+ss); 
 }

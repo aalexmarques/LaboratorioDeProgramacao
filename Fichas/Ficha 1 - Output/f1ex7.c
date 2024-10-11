@@ -1,13 +1,13 @@
 #include <stdio.h>
+
 int main(){
-    float pFabri, taxa, pMargem;
-    printf("\nPreco de fabrico: ");
-    scanf("%f",&pFabri);
-    printf("\nTaxa (\%): ");
-    scanf("%f",&taxa);
-    printf("\nMargem Fornecedor (\%):");
-    scanf("%f",&pMargem);
-    float pVenda = pFabri*(1+(taxa/100)+(pMargem/100));
-    printf("\nPreco de venda: %f",pVenda);
-    return 0;
+    float pf,t,pm,pv;
+    printf("Preco de fabrico: ");
+    scanf("%f",&pf);
+    printf("Taxa (%%): ");
+    scanf("%f",&t);
+    printf("Margem Fornecedor (%%): ");
+    scanf("%f",&pm);
+    pv = pf * (1+t/100+pm/100);
+    printf("Preco de venda: %f", pv);
 }
