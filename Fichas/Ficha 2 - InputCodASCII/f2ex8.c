@@ -1,26 +1,20 @@
 #include <stdio.h>
 
-/*
-int main(){
-    int c = getchar();
-    if(65 <= c && c <= 90){
-        printf("E MAISCULA");
-    }else if(97 <= c && c <= 122){
-        printf("e minuscula");
-    }else if(48 <= c && c <= 57){
-        printf("e algarismo");
-    }else{
-        printf("nao e alfanumerico");
-    }
-    return 0;
-}
-*/
+
 int main(){
     char ch;
-    printf("Insiria um caracter: ");
-    scanf(" %c", &ch);
+    printf("Insira um caracter: ");
+    ch = getchar();
     if('a' <= ch && ch <= 'z'){
-        printf("\ne minuscula");
+        ch-=32;
+        printf("e minuscula \nVERSAO MAISCULA: %c",ch);
+    }else if('A' <= ch && ch <= 'Z'){
+        ch+=32;
+        printf("E MAISCULA \nVersao minuscula: %c",ch);
+    }else if('0' <= ch && ch <= '9'){
+        printf("e um algarismo");
+    }else{
+        printf("Nao e alfanumerico");
     }
     return 0;
 }
