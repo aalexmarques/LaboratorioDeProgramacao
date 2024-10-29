@@ -10,14 +10,21 @@
 
 int main(){
     char c; int n;
-    scanf(" %c",&c);
-    scanf(" %d",&n);
+
+    printf("Char: ");
+    scanf("%c",&c);
+    printf("No Chars: ");
+    scanf("%d",&n);
+    printf("\n");
+    
     eramVinteAstericos(c,n);
-    printf("Numeros entre 1 e 5\n");
+    printf("Bem-vindo\n");
+    //printf("Numeros entre 1 e 5\n");
     eramVinteAstericos(c,n);
-    int j;
+    /*int j;
     for (j = 1; j<=5; j++){
         printf("%d\n",j);
     }
     eramVinteAstericos(c,n);
+    */
 }
