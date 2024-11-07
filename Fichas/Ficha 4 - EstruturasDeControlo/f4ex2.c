@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main(){
-    int linha, coluna;
+    int l, c;
 
-    for (linha = 1; linha <= 10; linha++){
-        for (coluna = 1; coluna <= linha; coluna++){
-            printf("%d ",coluna);
+    for (l = 1; l <= 10; l++){
+        for (c = 1; c <= l; c++){
+            printf("%d ",c);
         }
         printf("\n");
     }
