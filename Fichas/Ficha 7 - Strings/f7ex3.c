@@ -1,0 +1,1 @@
+#include "Fichas\Ficha 7 - Strings\headers\mystring.h"

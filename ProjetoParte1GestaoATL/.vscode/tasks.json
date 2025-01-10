@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ProjetoGestaoATL",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "src/main.c",
+                "src/inscricao.c",
+                "src/utils.c",
+                "-o",
+                "build/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilar todos os ficheiros de código-fonte e gerar o executável."
+        }
+    ]
+}

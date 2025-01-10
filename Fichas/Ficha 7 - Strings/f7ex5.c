@@ -1,3 +1,42 @@
+#include <stdio.h>
+#define MAX 39999
+#define MIN 1
+#define TABSIZE 13
+int intrevalo(int n){
+
+}
+
+int main(){
+    int tab1[TABSIZE] = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
+
+    char *tab2[TABSIZE] = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"}; 
+        // o * está em indicar que é um vetor de apontadores e cada posição é um apontador para aquela string
+    int num, naux;
+
+    do{
+    printf("Introduza um numero: ");
+    scanf("%d", &num);
+    if(num < MIN ||  num > MAX){
+        printf("O numero que introduziu não está dentro do intervalo [1;39999]");
+    }
+    }while(num < MIN ||  num > MAX);
+    //1999 -> M CM XC IX
+
+    int k = TABSIZE-1;
+    while (k>=0){
+        naux = num / tab1[k]; //determina quantas vezes um numero romano cabe em NUM
+        for (int i = 0; i < naux; i++)
+            printf("%s", tab2[k]);
+        num %= tab1[k]; //reduz o numero para o resto            
+        k--;
+    }
+
+    return 0;
+}
+
+
+
+
 /*
 #include <stdio.h>
 
@@ -22,11 +61,12 @@ int main(){
 }
 
 */
+/*
 #include <stdio.h>
 
 
 int main(){
-    int tab1[]={1,4,5,9,10,90,100,400,500,900,1000};
+    int tab1[]={1,4,5,9,10,40,50,90,100,400,500,900,1000};
 
     //vetor de caracters //string __//vetor de strings__ neste caso
     //apontador par o primeiro elemento da string 
@@ -55,5 +95,8 @@ int main(){
         }
         k = k-1;
     }
+
+    //M CM XC IX
 }
 
+*/

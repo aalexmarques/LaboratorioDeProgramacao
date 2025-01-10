@@ -1,0 +1,1 @@
+void separa_min_mai ( char *str , char *min , char *mai );

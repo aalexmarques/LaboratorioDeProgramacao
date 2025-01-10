@@ -1,0 +1,3 @@
+﻿  utils.c
+C:\Users\aabfc\OneDrive\Desktop\LaboratorioDeProgramacaoIPB\ProjetoParte1GestaoATL1\src\utils.c(50,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aabfc\OneDrive\Desktop\LaboratorioDeProgramacaoIPB\ProjetoParte1GestaoATL1\src\utils.c(69,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

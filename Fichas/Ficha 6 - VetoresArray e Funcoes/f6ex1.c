@@ -1,4 +1,40 @@
 #include <stdio.h>
+#define MESES 12
+
+int main(){
+    float salarios[MESES];
+    float totalSalarios = 0;
+    for(int i = 0; i < MESES; i++){
+        printf("Salario do mes %02d: ", i+1);
+        scanf("%f",&salarios[i]);
+    }
+    printf("\n\nMes\tSalario\n--------------\n");
+    for(int i = 0; i < MESES; i++){
+        printf("%02d\t%.2f\n",i+1,salarios[i]);
+        totalSalarios += salarios[i];
+    }
+    printf("--------------\nTotal %.2f",totalSalarios);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+#include <stdio.h>
 #include <math.h>
 
 int main(){
@@ -19,3 +55,4 @@ int main(){
     }
     printf("--------------\nTotal %.2f",total);
 }
+*/

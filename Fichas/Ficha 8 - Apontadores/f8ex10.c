@@ -1,3 +1,85 @@
+#include <stdio.h>
+#define MAX 50
+#define MIN 0
+
+int inserir(int *arrayInts){
+	int i = 0, num;
+	do{
+		printf("- No[%02d]: ",i+1);
+		scanf("%d", &num);
+		if(!(num >= 0 && num <= 50)) return i; 	
+		arrayInts[i] = num;
+		i++;
+	}while(1);
+}
+
+void imprimir(int *arrayInts, int max){
+	if (arrayInts != NULL){
+		for(int i = 0; i < max; i++){
+			printf("\n- No[%02d]: %d",i+1,arrayInts[i]);
+		}
+	}
+}
+
+int *valorMaisAlto(int *arrayInts,int max){
+    if(max != 0){
+		int *pmax = arrayInts;
+		for (int i = 1; i < max; i++){
+			if (*pmax <= arrayInts[i]) pmax = &arrayInts[i];
+		}
+		return pmax;
+	}else return NULL;
+}
+
+int *valorMaisBaixo(int *arrayInts, int max){
+    if(max != 0){
+		int *pmin = arrayInts;
+		for (int i = 1; i < max; i++){
+			if (*pmin >= arrayInts[i]) pmin = &arrayInts[i];
+		}
+		return pmin;
+	}else return NULL;
+}
+
+int difMinMax(int *min, int *max){
+	return *max-*min;
+}
+
+void valoresEntreMinMax(int *inicio, int *fim){
+	int *pi = inicio;
+	while(pi <= fim){
+		printf("\n- %d",*(pi++));
+	}
+}
+
+int main(){
+	int *arrayInts, *pvmax, *pvmin, max;
+
+	printf("# Introduza valores ente [0;50]\n");
+
+	max = inserir(arrayInts);
+
+	if (max == 0) {
+        printf("Nenhum valor valido foi inserido.\n");
+        return 0;
+    }
+
+	pvmax = valorMaisAlto(arrayInts,max);
+	pvmin = valorMaisBaixo(arrayInts,max);
+
+	printf("\n# Min: %d\n# Max: %d",*pvmin,*pvmax);
+
+	printf("\n\n# Diferenca entre min/max: %d\n", difMinMax(pvmin,pvmax));
+	
+	imprimir(arrayInts,max);
+
+	printf("\n# Valores entre o valor minimo e maximo:");
+	if(pvmin < pvmax){
+		valoresEntreMinMax(pvmin,pvmax);
+	}else if(pvmin > pvmax)
+		valoresEntreMinMax(pvmax,pvmin);
+}
+
 /*
 #include <stdio.h>
 #define NMAX 100
@@ -28,6 +110,7 @@ int main(){
 }
 */
 
+/*
 #include <stdio.h>
 #define MAX 100
 
@@ -118,3 +201,5 @@ int main() {
 	else
 		printf("Nao foram inseridos numeros validos.");
 }
+
+*/

@@ -6,14 +6,14 @@ void subStringCifra(char str[]){
     for(i=0; str[i]!='\0';i++){
         if ('A' <= str[i] && str[i] <= 'T' || 'a' <= str[i] && str[i] <= 't'){
             str[i] += 6;
-        }else if ('U' <= str[i] && str[i] <= 'Z' || 'u' <0){
+        }else if ('U' <= str[i] && str[i] <= 'Z' || 'u' <= str[i] && str[i] <= 'z'){
             str[i] -= 20;
         }
     }
 }
 
 int main(){
-    char string[MAXNUM];
-    gets(MAXNUM);
-    
+    char str[MAXNUM];
+    subStringCifra(gets(str));
+    puts(str);
 }
